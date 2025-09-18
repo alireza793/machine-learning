@@ -6,8 +6,8 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 
 # 2.load   Iris dataset
 iris = load_iris()
-X = iris.data   # ویژگی‌ها
-y = iris.target # برچسب‌ها (سه کلاس گل‌ها)
+X = iris.data   # features
+y = iris.target #flowers kindes(classes)
 
 # 3.split dataset between train  and test 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
