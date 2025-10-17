@@ -6,7 +6,7 @@ from sklearn.metrics import classification_report, accuracy_score
 
 # 1. خواندن داده‌ها
 true_df = pd.read_csv("True.csv")
-fake_df = pd.read_csv('Fake.csv/Fake.csv')
+fake_df = pd.read_csv('Fake.csv')
 
 # 2. افزودن برچسب
 true_df["label"] = 1   # خبر درست
