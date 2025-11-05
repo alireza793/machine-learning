@@ -17,7 +17,7 @@ from imblearn.over_sampling import SMOTE
 # ============================================================
 
 # Dataset: NASA Kepler Exoplanet Search Results (Kaggle)
-data = pd.read_csv("kepler_exoplanet_search_results.csv")
+data = pd.read_csv("/ your path /file.csv")
 
 # Select relevant numerical features
 features = [
