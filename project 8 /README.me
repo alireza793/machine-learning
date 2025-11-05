@@ -1,0 +1,62 @@
+# 🪐 Exoplanet Confirmation using Neural Networks and SMOTE
+
+This project uses NASA’s *Kepler Exoplanet Search Results* dataset to predict whether an observed celestial object is a **confirmed exoplanet** or not.  
+A **Multi-Layer Perceptron (MLP)** neural network was trained using **SMOTE** to handle class imbalance, and evaluated on separate train, validation, and test sets.
+
+---
+
+## 📊 Dataset
+- **Source:** [Kepler Exoplanet Search Results (Kaggle)](https://www.kaggle.com/datasets/nasa/kepler-exoplanet-search-results)  
+- **Features used:**  
+  `koi_teq`, `koi_insol`, `koi_prad`, `koi_period`,  
+  `koi_steff`, `koi_slogg`, `koi_srad`, `koi_depth`, `koi_duration`  
+- **Target:** Binary — `1` for *CONFIRMED*, `0` otherwise.
+
+---
+
+## ⚙️ Model Pipeline
+1. **Data Cleaning** — Removed NaN values and selected relevant features.  
+2. **Normalization** — Applied `StandardScaler`.  
+3. **Train/Validation/Test Split:** 70% / 15% / 15%.  
+4. **SMOTE** — Balanced the minority class (ratio = 0.5).  
+5. **Model** — `MLPClassifier` from `sklearn.neural_network`.  
+6. **Evaluation Metrics:** Accuracy, Precision, Recall, F1-Score, ROC-AUC.
+
+---
+
+## 📈 Results
+
+| Dataset | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
+|----------|-----------|-----------|---------|-----------|----------|
+| Validation | 0.804 | 0.577 | 0.791 | 0.667 | 0.884 |
+| Test | 0.789 | 0.555 | 0.762 | 0.642 | 0.864 |
+
+The model achieved a high **recall**, indicating strong ability to identify confirmed exoplanets.
+
+---
+
+## 💻 Example Prediction
+
+For input example:  
+`[280, 1.0, 1.2, 365, 5800, 4.5, 1.0, 1000, 10]`
+
+Output:
+---
+
+## 🧠 Technologies Used
+- Python  
+- NumPy, Pandas  
+- Scikit-learn (MLPClassifier, SMOTE)  
+- Matplotlib (optional visualization)
+
+---
+
+## 📚 Citation
+If you use this project or data, please cite:  
+**NASA Kepler Exoplanet Search Results** – [Kaggle Dataset](https://www.kaggle.com/datasets/nasa/kepler-exoplanet-search-results)
+
+---
+
+## 👤 Author
+**Alireza Hakemi**  
+*University National of Skills, Iran*
